@@ -11,3 +11,7 @@ export const applyNumber = (number) => {
     // console.log(number)
     return ({ type: APPLY_NUMBER, payload: number });
 }
+
+export const applyOperation = (operator) => {
+    return ({type: CHANGE_OPERATION, payload: operator})
+}
