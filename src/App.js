@@ -7,7 +7,7 @@ import CalcButton from './components/CalcButton';
 import { initialState } from "./reducers/index";
 import reducer from "./reducers/index";
 
-import { applyNumber, applyOperation, applyClear } from './actions/index';
+import { applyNumber, applyOperation, applyClear, memPlus, memR, memC } from './actions/index';
 
 function App() {
 
@@ -36,9 +36,9 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={"M+"} />
-              <CalcButton value={"MR"} />
-              <CalcButton value={"MC"} />
+              <CalcButton onClick={() => dispatch(memPlus())} value={"M+"} />
+              <CalcButton onClick={() => dispatch(memR())} value={"MR"} />
+              <CalcButton onClick={() => dispatch(memC())} value={"MC"} />
             </div>
 
             <div className="row">
