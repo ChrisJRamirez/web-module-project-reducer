@@ -37,9 +37,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
-              <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton onClick={() => dispatch(memPlus())} value={"M+"}/>
+              <CalcButton onClick={() => dispatch(memR())} value={"MR"}/>
+              <CalcButton onClick={() => dispatch(memC())} value={"MC"}/>
             </div>
 
             <div className="row">
@@ -67,7 +67,7 @@ function App() {
             </div>
 
             <div className="row ce_button">
-              <CalcButton value={"CE"}/>
+              <CalcButton onClick={() => dispatch(applyClear())} value={"CE"}/>
             </div>
 
           </form>
